@@ -1,0 +1,24 @@
+- Function:
+
+FUNCTION dot_product(v1[] :INTEGER, v2[] :INTEGER) : INTEGER
+
+.VAR
+    i,j: INTEGER:=0
+
+.BEGIN
+      IF (v1==null) THEN
+      print("Invalid vector1")
+   END_IF
+   IF (v2==null) THEN
+       print("Invalid vector")
+   END_IF
+   IF (v1.length!=v2.length) THEN
+      print("Unequal vectors")
+   END_IF
+   FOR i FROM 0 TO v1.Length 
+	STEP 1  DO
+        j := j+ v1[i] * v2[i];
+   END_FOR
+    RETURN j;
+END
+

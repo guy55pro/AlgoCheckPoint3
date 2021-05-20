@@ -1,0 +1,30 @@
+- Algorithm:
+
+ALGORITHM orthogonal
+
+.VAR
+    a,b,i:INTEGER:=0
+    v1: ARRAY_OF Integer[];
+    v2: ARRAY_OF Integer[];
+
+.BEGIN
+    Write("Enter the number of vectors : it should be pair")
+    read(b)
+    IF (b mod 2 ==0) THEN
+    FOR i FROM 0 TO b 
+	STEP 1 DO
+        write("Enter the first pair of vectors");
+        read(v1,v2);
+        a:=dot_product(v1,v2)
+        IF (a==0) THEN
+            print("Vectors are orthogonal.")
+        ELSE
+            print("Vectors are not orthogonal.")
+        END_IF
+    END_FOR    
+    END_IF
+    ELSE 
+    print("You should enter a pair number)
+    print(, the dot-product is invalid)
+   
+END
